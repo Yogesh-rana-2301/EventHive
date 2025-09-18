@@ -15,7 +15,6 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 - 💬 **Dual Chat System** - Connect locally with your city and globally across India  
 - 🎭 **Anonymous Options** - Express freely while building genuine connections
 - 🏛️ **Community-Driven** - Users create, share, and discover events together
-- 🌏 **Multi-Language Support** - Chat in English or your preferred regional language
 
 ---
 
@@ -33,7 +32,6 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 #### 🌍 Global Indian Chat
 - Connect with people from different states across India
 - Cross-cultural dialogue and networking opportunities  
-- Multi-language support (English + Regional languages)
 - Optional anonymity for open conversations
 
 #### 🏙️ City-Level Chat Groups  
@@ -95,8 +93,6 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 ### 🎯 Phase 3: Advanced Features (Q3-Q4)
 - [ ] AI-driven event recommendations
 - [ ] Gamification system (badges, streaks)
-- [ ] AR event navigation
-- [ ] Multi-language chat translation
 - [ ] Analytics dashboard
 
 ---
@@ -107,7 +103,7 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 |---------|-------------|-----------|
 | **Urban Youth** | College students, young professionals (18-30) | Event discovery, making friends, networking |
 | **Community Organizers** | Event creators, local businesses | Event promotion, community building |
-| **Social Connectors** | People seeking local/national connections | Cultural exchange, language practice |
+| **Social Connectors** | People seeking local/national connections | Cultural exchange |
 
 ---
 
@@ -119,7 +115,6 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 | Local + Global Chat | ✅ | ❌ | ❌ | ❌ |
 | Anonymous Options | ✅ | ❌ | ❌ | ❌ |
 | Community Publishing | ✅ | ❌ | ✅ | ❌ |
-| Multi-language Support | ✅ | ❌ | ❌ | ✅ |
 
 ---
 
