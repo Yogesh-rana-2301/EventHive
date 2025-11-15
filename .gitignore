@@ -1,1 +1,133 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+*.lcov
+.nyc_output
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+
+# Production
+/build
+/dist
+
+# Misc
 .DS_Store
+*.pem
+.AppleDouble
+.LSOverride
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local env files
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# Typescript
+*.tsbuildinfo
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# IDE - IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# IDE - WebStorm
+.idea/
+
+# Supabase
+.supabase/
+
+# Prisma (if using with Supabase)
+prisma/migrations/
+
+# OS
+Thumbs.db
+Desktop.ini
+._*
+*.swp
+*.swo
+*~
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Temporary folders
+tmp/
+temp/
+
+# Storybook
+storybook-static/
+
+# Turbo
+.turbo
+
+# Backup files
+*.backup
+*.bak
+*.tmp
+
+# Lock files (choose one based on your package manager)
+# Uncomment the one you DON'T use:
+# package-lock.json  # if using yarn or pnpm
+# yarn.lock          # if using npm or pnpm
+# pnpm-lock.yaml     # if using npm or yarn
+
+# Public uploads (if you store files locally)
+/public/uploads/
+
+# Certificate files
+*.key
+*.crt
+*.pem
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# Cache
+.cache/
+.parcel-cache/
