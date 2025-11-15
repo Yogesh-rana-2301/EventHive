@@ -3,7 +3,7 @@
 > **Map-based event discovery meets community chat** - Connecting India through events and conversations
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
-[![Version](https://img.shields.io/badge/version-0.2.0-orange.svg)]()
+[![Version](https://img.shields.io/badge/version-0.1.0-orange.svg)]()
 [![Backend](https://img.shields.io/badge/backend-Supabase-00C896.svg)]()
 [![Auth](https://img.shields.io/badge/auth-integrated-blue.svg)]()
 
