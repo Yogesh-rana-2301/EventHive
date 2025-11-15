@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Landing Page Integration</title>
+    <style>
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          Cantarell, sans-serif;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+      .container {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        margin-top: 0;
+        font-size: 2.5em;
+      }
+      .step {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        border-left: 4px solid #10b981;
+      }
+      .step h3 {
+        margin-top: 0;
+        color: #10b981;
+      }
+      button {
+        background: #10b981;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 10px 5px;
+        transition: all 0.3s;
+      }
+      button:hover {
+        background: #059669;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .info {
+        background: rgba(59, 130, 246, 0.3);
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+        border-left: 4px solid #3b82f6;
+      }
+      .success {
+        background: rgba(16, 185, 129, 0.3);
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+        border-left: 4px solid #10b981;
+      }
+      code {
+        background: rgba(0, 0, 0, 0.3);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: "Courier New", monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎉 Landing Page Integration Test</h1>
+
+      <div class="success">
+        <h3>✅ Integration Complete!</h3>
+        <p>The landing page is now connected to your main EventHive app.</p>
+      </div>
+
+      <div class="step">
+        <h3>📋 How to Test</h3>
+        <p><strong>Option 1:</strong> Open the landing page directly</p>
+        <button onclick="openLandingDirect()">
+          Open Landing Page (Direct HTML)
+        </button>
+
+        <p style="margin-top: 20px">
+          <strong>Option 2:</strong> Via Next.js server (recommended)
+        </p>
+        <button onclick="openLandingNext()">Open Landing Page (Next.js)</button>
+      </div>
+
+      <div class="step">
+        <h3>🔄 Authentication Flow</h3>
+        <ol>
+          <li>Click one of the buttons above to open the landing page</li>
+          <li>Click "Sign Up Free" or "Sign In" on the landing page</li>
+          <li>Fill out the form with any test data</li>
+          <li>Submit the form</li>
+          <li>You'll be automatically redirected to the main app</li>
+          <li>You'll be logged in automatically! ✨</li>
+        </ol>
+      </div>
+
+      <div class="info">
+        <h3>ℹ️ Technical Details</h3>
+        <ul>
+          <li>
+            <strong>Landing Page:</strong> <code>/landing_page/index.html</code>
+          </li>
+          <li><strong>Main App:</strong> <code>src/app/page.tsx</code></li>
+          <li>
+            <strong>Auth Store:</strong> <code>src/stores/auth-store.ts</code>
+          </li>
+          <li>
+            <strong>Storage:</strong> localStorage key:
+            <code>eventhive_user</code>
+          </li>
+        </ul>
+      </div>
+
+      <div class="step">
+        <h3>🛠 Check Current Auth State</h3>
+        <button onclick="checkAuthState()">Check Auth State</button>
+        <button onclick="clearAuth()">Clear Auth Data</button>
+        <pre
+          id="authState"
+          style="
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            max-height: 200px;
+            overflow: auto;
+          "
+        ></pre>
+      </div>
+
+      <div class="info">
+        <h3>📖 Documentation</h3>
+        <p>
+          For detailed information, check
+          <code>LANDING_PAGE_INTEGRATION.md</code>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function openLandingDirect() {
+        // Get the current origin and construct the path
+        const currentPath = window.location.pathname;
+        const baseUrl = window.location.origin;
+
+        // Navigate to the landing page HTML file
+        window.open(baseUrl + "/landing_page/index.html", "_blank");
+      }
+
+      function openLandingNext() {
+        // Open via Next.js public folder
+        window.open("/landing_page/index.html", "_blank");
+      }
+
+      function checkAuthState() {
+        const authData = localStorage.getItem("eventhive_user");
+        const zustandAuth = localStorage.getItem("eventhive-auth");
+
+        const output = document.getElementById("authState");
+
+        if (authData || zustandAuth) {
+          let result = "🔐 Authentication State:\n\n";
+
+          if (authData) {
+            result += "📝 Landing Page Data (eventhive_user):\n";
+            result += JSON.stringify(JSON.parse(authData), null, 2);
+            result += "\n\n";
+          }
+
+          if (zustandAuth) {
+            result += "🗄 App Store Data (eventhive-auth):\n";
+            result += JSON.stringify(JSON.parse(zustandAuth), null, 2);
+          }
+
+          output.textContent = result;
+        } else {
+          output.textContent =
+            "❌ No authentication data found.\n\nTry signing up on the landing page first!";
+        }
+      }
+
+      function clearAuth() {
+        localStorage.removeItem("eventhive_user");
+        localStorage.removeItem("eventhive-auth");
+
+        const output = document.getElementById("authState");
+        output.textContent =
+          "✅ All authentication data cleared!\n\nYou can now test the signup flow again.";
+
+        setTimeout(() => {
+          checkAuthState();
+        }, 2000);
+      }
+
+      // Check auth state on load
+      window.addEventListener("load", checkAuthState);
+    </script>
+  </body>
+</html>

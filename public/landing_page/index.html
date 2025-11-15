@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventHive - Connect Through Events</title>
+    <meta
+      name="description"
+      content="EventHive is an AI-powered event discovery platform where users find and create events, connect with like-minded people, and build meaningful relationships."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <i class="fas fa-hexagon"></i>
+          <span>EventHive</span>
+        </div>
+        <div class="nav-menu">
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#how-it-works" class="nav-link">How It Works</a>
+          <a href="#app-preview" class="nav-link">Preview</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle dark theme"
+          >
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+          </button>
+          <button class="login-btn" id="login-btn">Sign In</button>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>
+            Discover New<br /><span class="highlight">Connections</span
+            ><br />Through Events
+          </h1>
+          <p>
+            Find people who share your interests through events happening around
+            you. Discover everything you need to build meaningful connections in
+            one app.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn-primary" id="signup-btn">
+              <i class="fas fa-user-plus"></i>
+              Sign Up Free
+            </button>
+            <button class="btn-secondary" id="signin-btn">
+              <i class="fas fa-sign-in-alt"></i>
+              Sign In
+            </button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <i class="fas fa-users"></i>
+              <span>10,000+ Active Users</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-calendar-check"></i>
+              <span>500+ Events Daily</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="phone-mockup">
+            <div class="screen">
+              <div class="app-interface">
+                <div class="status-bar"></div>
+                <div class="event-card">
+                  <div class="event-image"></div>
+                  <div class="event-info">
+                    <h4>Tech Meetup Tonight</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Downtown</p>
+                    <p><i class="fas fa-users"></i> 12 attending</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is EventHive Section -->
+    <section class="about">
+      <div class="container">
+        <h2>What is EventHive?</h2>
+        <p class="about-description">
+          EventHive is an AI-powered, event-first social platform where users
+          discover people around them based on real-time and planned events like
+          tech meetups, sports, concerts, or networking sessions. We bring real,
+          meaningful, in-person connections back into your life.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Why Choose EventHive?</h2>
+        <p class="section-subtitle">
+          Everything you need to discover, connect, and build meaningful
+          relationships through events.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-calendar-plus"></i>
+            </div>
+            <h3>Create or Join Events</h3>
+            <p>
+              Create your own events or discover exciting happenings around you.
+              From tech meetups to sports, find your community.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-broadcast-tower"></i>
+            </div>
+            <h3>Discover Live Events</h3>
+            <p>
+              See what's happening right now in your area. Join spontaneous
+              gatherings and meet like-minded people instantly.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Match by Interest & Location</h3>
+            <p>
+              Our AI matches you with people who share your interests and are
+              nearby, making connections more meaningful.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-check"></i>
+            </div>
+            <h3>Verified User Profiles</h3>
+            <p>
+              AI-powered verification ensures authentic connections. Meet real
+              people with genuine interests, not fake profiles.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-stream"></i>
+            </div>
+            <h3>Event-Based Feed</h3>
+            <p>
+              No random content. Your feed shows only events and activities
+              relevant to your interests and location.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <h3>Venue Integration</h3>
+            <p>
+              Seamlessly book venues, restaurants, and event spaces directly
+              through the app for your gatherings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <p class="section-subtitle">
+          Get started with EventHive in just three simple steps and start
+          building meaningful connections today.
+        </p>
+
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Sign Up & Complete Profile</h3>
+            <p>
+              Create your account, add your interests, and verify your profile
+              with our AI-powered verification system.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Explore or Create Events</h3>
+            <p>
+              Browse events happening around you or create your own gatherings.
+              From tech talks to sports, find your perfect match.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Connect, Meet & Share</h3>
+            <p>
+              Connect with like-minded people, attend events in person, and
+              share amazing experiences together.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Preview Section -->
+    <section id="app-preview" class="app-preview">
+      <div class="container">
+        <h2>See EventHive in Action</h2>
+        <p class="section-subtitle">
+          Explore our beautiful, intuitive interface designed to make connecting
+          through events effortless.
+        </p>
+
+        <div class="preview-tabs">
+          <button class="tab-btn active" data-tab="home">Home Feed</button>
+          <button class="tab-btn" data-tab="explore">Explore Map</button>
+          <button class="tab-btn" data-tab="profile">Profile</button>
+          <button class="tab-btn" data-tab="suggestions">
+            Event Suggestions
+          </button>
+        </div>
+
+        <div class="preview-content">
+          <div class="tab-content active" id="home">
+            <div class="preview-mockup">
+              <h4>Home Feed</h4>
+              <p>Stay updated with events from your personalized feed</p>
+            </div>
+          </div>
+
+          <div class="tab-content" id="explore">
+            <div class="preview-mockup">
+              <h4>Explore Map</h4>
+              <p>Discover events and people around you</p>
+            </div>
+          </div>
+
+          <div class="tab-content" id="profile">
+            <div class="preview-mockup">
+              <h4>Profile</h4>
+              <p>Connect and communicate instantly</p>
+            </div>
+          </div>
+
+          <div class="tab-content" id="suggestions">
+            <div class="preview-mockup">
+              <h4>Event Suggestions</h4>
+              <p>Get personalized suggestions for events to attend</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Get answers to the most common questions about EventHive.
+        </p>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Is EventHive free to use?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes! EventHive is completely free to download and use. All core
+                features are available to everyone at no cost.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How does the verification system work?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Our AI-powered verification system uses advanced technology to
+                ensure users are authentic. You'll complete a simple
+                verification process that confirms your identity.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Who can join EventHive?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                EventHive is open to anyone aged 18 and above who wants to make
+                meaningful connections through shared events and activities.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How do I stay safe while meeting new people?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                EventHive helps you make safer connections by showing user
+                verification status, event history, and reviews from other
+                attendees.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I use EventHive in my city?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                EventHive is available in major cities worldwide and expanding
+                rapidly. Check the app store to see if we're available in your
+                area.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Make Real Connections?</h2>
+          <p>
+            Join thousands of people who are already discovering amazing events
+            and building meaningful relationships with EventHive.
+          </p>
+          <div class="cta-buttons">
+            <button class="btn-primary" onclick="openAuthModal('signup')">
+              <i class="fas fa-rocket"></i>
+              Get Started Now
+            </button>
+            <button class="btn-secondary" onclick="openAuthModal('signin')">
+              <i class="fas fa-sign-in-alt"></i>
+              Sign In
+            </button>
+          </div>
+          <p class="cta-note">Join for free • No credit card required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <i class="fas fa-hexagon"></i>
+              <span>EventHive</span>
+            </div>
+            <p>
+              Connecting people through shared events and meaningful
+              experiences. Build real relationships in the real world.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="link-group">
+              <h4>Product</h4>
+              <a href="#features">Features</a>
+              <a href="#how-it-works">How It Works</a>
+              <a href="#app-preview">Preview</a>
+              <a href="#">Pricing</a>
+            </div>
+
+            <div class="link-group">
+              <h4>Support</h4>
+              <a href="#faq">FAQ</a>
+              <a href="#">Help Center</a>
+              <a href="#">Contact Us</a>
+              <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="link-group">
+              <h4>Join Us</h4>
+              <a href="#">Careers</a>
+              <a href="#">Become a Partner</a>
+              <a href="#">Press Kit</a>
+              <a href="#">Terms of Use</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 EventHive. All rights reserved. • Contact:
+            <a href="mailto:support@eventhive.com">support@eventhive.com</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Authentication Modal -->
+    <div class="auth-modal" id="auth-modal">
+      <div class="modal-overlay" onclick="closeAuthModal()"></div>
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeAuthModal()">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <!-- Sign In Form -->
+        <div class="auth-form" id="signin-form">
+          <div class="form-header">
+            <h2>Welcome Back</h2>
+            <p>Sign in to your EventHive account</p>
+          </div>
+
+          <form class="login-form" onsubmit="handleSignIn(event)">
+            <div class="input-group">
+              <label for="signin-email">Email Address</label>
+              <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input
+                  type="email"
+                  id="signin-email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="signin-password">Password</label>
+              <div class="input-wrapper">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  id="signin-password"
+                  placeholder="Enter your password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="toggle-password"
+                  onclick="togglePassword('signin-password')"
+                >
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-options">
+              <label class="checkbox-wrapper">
+                <input type="checkbox" id="remember-me" />
+                <span class="checkmark"></span>
+                Remember me
+              </label>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="auth-btn primary">
+              <i class="fas fa-sign-in-alt"></i>
+              Sign In
+            </button>
+
+            <div class="divider">
+              <span>Or continue with</span>
+            </div>
+
+            <div class="social-auth">
+              <button
+                type="button"
+                class="social-btn google"
+                onclick="signInWithGoogle()"
+              >
+                <i class="fab fa-google"></i>
+                Google
+              </button>
+              <button
+                type="button"
+                class="social-btn facebook"
+                onclick="signInWithFacebook()"
+              >
+                <i class="fab fa-facebook-f"></i>
+                Facebook
+              </button>
+            </div>
+
+            <p class="auth-switch">
+              Don't have an account?
+              <button
+                type="button"
+                onclick="switchAuthMode('signup')"
+                class="switch-btn"
+              >
+                Sign Up
+              </button>
+            </p>
+          </form>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="auth-form" id="signup-form" style="display: none">
+          <div class="form-header">
+            <h2>Join EventHive</h2>
+            <p>Create your account and start connecting</p>
+          </div>
+
+          <form class="login-form" onsubmit="handleSignUp(event)">
+            <div class="input-row">
+              <div class="input-group">
+                <label for="signup-firstname">First Name</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-user"></i>
+                  <input
+                    type="text"
+                    id="signup-firstname"
+                    placeholder="First name"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="signup-lastname">Last Name</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-user"></i>
+                  <input
+                    type="text"
+                    id="signup-lastname"
+                    placeholder="Last name"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="signup-email">Email Address</label>
+              <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input
+                  type="email"
+                  id="signup-email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="signup-password">Password</label>
+              <div class="input-wrapper">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  id="signup-password"
+                  placeholder="Create a password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="toggle-password"
+                  onclick="togglePassword('signup-password')"
+                >
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+              <div class="password-strength">
+                <div class="strength-bar"></div>
+                <span class="strength-text">Password strength</span>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="signup-confirm-password">Confirm Password</label>
+              <div class="input-wrapper">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  id="signup-confirm-password"
+                  placeholder="Confirm your password"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-options">
+              <label class="checkbox-wrapper">
+                <input type="checkbox" id="terms-agree" required />
+                <span class="checkmark"></span>
+                I agree to the <a href="#">Terms of Service</a> and
+                <a href="#">Privacy Policy</a>
+              </label>
+            </div>
+
+            <button type="submit" class="auth-btn primary">
+              <i class="fas fa-user-plus"></i>
+              Create Account
+            </button>
+
+            <div class="divider">
+              <span>Or continue with</span>
+            </div>
+
+            <div class="social-auth">
+              <button
+                type="button"
+                class="social-btn google"
+                onclick="signUpWithGoogle()"
+              >
+                <i class="fab fa-google"></i>
+                Google
+              </button>
+              <button
+                type="button"
+                class="social-btn facebook"
+                onclick="signUpWithFacebook()"
+              >
+                <i class="fab fa-facebook-f"></i>
+                Facebook
+              </button>
+            </div>
+
+            <p class="auth-switch">
+              Already have an account?
+              <button
+                type="button"
+                onclick="switchAuthMode('signin')"
+                class="switch-btn"
+              >
+                Sign In
+              </button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
