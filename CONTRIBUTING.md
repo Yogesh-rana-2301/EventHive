@@ -14,7 +14,7 @@ First off, thank you for considering contributing to EventHive! It's people like
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [EventHive Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [INSERT EMAIL].
+This project and everyone participating in it is governed by the [EventHive Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to yogeshrana2301@gmail.com.
 
 ## Getting Started
 
@@ -31,12 +31,12 @@ Before you begin, ensure you have the following installed:
 1. Fork the repository on GitHub
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/EventHive.git
+   git clone https://github.com/yogesh-rana-2301/EventHive.git
    cd EventHive
    ```
 3. Add the upstream repository:
    ```bash
-   git remote add upstream https://github.com/ORIGINAL_OWNER/EventHive.git
+   git remote add upstream https://github.com/yogesh-rana-2301/EventHive.git
    ```
 
 ## How Can I Contribute?
@@ -217,14 +217,11 @@ When adding new features:
 ## Community
 
 - **Questions?** Open a GitHub Discussion
-- **Chat**: Join our Discord (if available)
-- **Twitter**: Follow us @EventHive (if available)
 
 ## Recognition
 
 Contributors will be recognized in:
 - README.md contributors section
 - Release notes
-- Project website (if applicable)
-
+  
 Thank you for contributing to EventHive! 🎉
