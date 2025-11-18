@@ -155,18 +155,18 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 
 ### 🎯 Phase 1: MVP (Q1-Q2)
 
-- [ ] Interactive map with event plotting
-- [ ] City-level chat rooms
-- [ ] Basic event publishing system
-- [ ] User authentication & profiles
+- [x] Interactive map with event plotting
+- [x] City-level chat rooms
+- [x] Basic event publishing system
+- [x] User authentication & profiles
 
 ### 🎯 Phase 2: Community Expansion (Q2-Q3)
 
 - [ ] Global Indian chat rooms
-- [ ] Anonymous user options
-- [ ] Event ticketing integration
-- [ ] Advanced event filtering
-- [ ] Push notifications
+- [x] Anonymous user options
+- [x] Event ticketing integration
+- [x] Advanced event filtering
+- [x] Push notifications
 
 ### 🎯 Phase 3: Advanced Features (Q3-Q4)
 
@@ -336,16 +336,29 @@ We welcome contributions from developers, designers, and community enthusiasts! 
 
 ## 📊 Project Stats
 
-- **Lines of Code**: Coming Soon
+- **Lines of Code**: 25824
 - **Contributors**: 4 (You could be next! 🚀)
-- **Issues**: 1 open
+- **Issues**: 0 open
 - **Pull Requests**: 0 open
+  
+| Language       | Files | Blank | Comment | Code  |
+|----------------|-------|-------|---------|--------|
+| TypeScript     | 42    | 729   | 157     | 7832   |
+| Markdown       | 19    | 1032  | 24      | 2748   |
+| CSS            | 2     | 338   | 40      | 1967   |
+| JSON           | 3     | 0     | 0       | 9512   |
+| JavaScript     | 5     | 287   | 170     | 1581   |
+| SQL            | 4     | 118   | 96      | 1135   |
+| HTML           | 2     | 72    | 12      | 817    |
+| Bourne Shell   | 3     | 29    | 21      | 226    |
+| YAML           | 1     | 1     | 4       | 6      |
+| **Total**      | **81** | **2606** | **524** | **25824** |
 
 ---
 
 ## 📋 API Documentation
 
-_Comprehensive API documentation will be available at `/docs` with interactive Swagger interface_
+Comprehensive API documentation is available in [Docs](/Docs) folder
 
 ### Core API Endpoints
 
@@ -424,7 +437,7 @@ GET /api/leaderboard/city/:cityId
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](/LICENSE) for more information.
 
 ---
 
