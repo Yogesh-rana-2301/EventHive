@@ -1,4 +1,4 @@
-# 🗺️ EventHive - Interactive Event Discovery & Chat Platform
+#  EventHive - Interactive Event Discovery & Chat Platform
 
 > **Map-based event discovery meets community chat** - Connecting India through events and conversations
 
@@ -7,24 +7,24 @@
 [![Backend](https://img.shields.io/badge/backend-Supabase-00C896.svg)]()
 [![Auth](https://img.shields.io/badge/auth-integrated-blue.svg)]()
 
-## 🚀 Vision
+##  Vision
 
 EventHive is the first-of-its-kind platform that combines **interactive map-based event discovery** with **real-time community chat**, designed specifically for India. We're building bridges between local communities and creating connections across the nation through immersive event experiences.
 
-### ✨ What makes us unique?
+###  What makes us unique?
 
-- 🗺️ **Interactive Map Discovery** - Explore events visually on an intuitive map interface with location-based recommendations
-- 💬 **Multi-Layered Chat System** - Event-specific chats, city groups, global India conversations with anonymity options
-- 🎭 **Complete Event Lifecycle** - From discovery to after-event connections, we keep communities engaged
-- 🏛️ **Community-Driven** - Users create, share, and discover events together with verified organizer system
-- 🎫 **Integrated Experience** - Seamless ticketing with UPI integration and instant event access
-- 🔐 **Production-Ready Backend** - Powered by Supabase with real-time capabilities
+-  **Interactive Map Discovery** - Explore events visually on an intuitive map interface with location-based recommendations
+-  **Multi-Layered Chat System** - Event-specific chats, city groups, global India conversations with anonymity options
+-  **Complete Event Lifecycle** - From discovery to after-event connections, we keep communities engaged
+-  **Community-Driven** - Users create, share, and discover events together with verified organizer system
+-  **Integrated Experience** - Seamless ticketing with UPI integration and instant event access
+-  **Production-Ready Backend** - Powered by Supabase with real-time capabilities
 
 ---
 
-## 🎯 Core Features
+##  Core Features
 
-### 📍 Smart Event Discovery & Management
+###  Smart Event Discovery & Management
 
 - **Interactive Map Interface** - Click, explore, and discover events in your area with location-based suggestions
 - **Advanced Search & Filters** - Find events by category, date, price, distance, and popularity
@@ -34,9 +34,9 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 - **Smart Location Services** - Auto-adjust to current location with manual override options
 - **Integrated Ticketing** - Seamless paid/free event booking with UPI and digital wallet support
 
-### 💭 Community Ecosystem
+###  Community Ecosystem
 
-#### 🎪 Event-Specific Mini Chats
+####  Event-Specific Mini Chats
 
 - **Automatic Chat Creation** - Every event gets its own temporary chatroom
 - **Pre-Event Coordination** - Attendees connect, plan, and build excitement together
@@ -44,7 +44,7 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 - **Hierarchical Chat System** - Separate channels for organizers/trusted members and public discussion
 - **Auto-Archive System** - Chats automatically archive post-event for future reference
 
-#### 🌟 The "After-Event" Hub
+####  The "After-Event" Hub
 
 - **48-Hour Connection Window** - Private group chats for events with 10+ attendees
 - **Photo & Memory Sharing** - Preserve event memories and connections
@@ -52,37 +52,37 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 - **Friend Discovery** - Convert event connections into lasting friendships
 - **User Event History** - Track attended events and past connections
 
-#### 🌍 Global Indian Chat Network
+####  Global Indian Chat Network
 
 - **State-Wise Communities** - Join and explore different state groups across India
 - **Anonymous Mode Available** - Express freely with optional identity protection
 - **Cross-Cultural Dialogue** - Connect with people from different regions
 - **Dynamic Group Management** - Join/leave state groups based on interests
 
-#### 🏙️ City-Level Chat Groups
+####  City-Level Chat Groups
 
 - **Hyper-Local Discussions** - Connect with people in your specific city
 - **Local Opportunity Sharing** - Discover hidden gems and local events
 - **Friendship Building** - Build real connections in your area
 - **Gamified Engagement** - Badges, streaks, and community recognition
 
-### 🎫 Enhanced User Experience
+###  Enhanced User Experience
 
-#### 🔐 Smart Onboarding
+####  Smart Onboarding
 
 - **Seamless Registration** - Quick login/register with social auth options
 - **Location Permissions** - Smart location detection with manual configuration
 - **Username Creation** - Personalized identity with availability checker
 - **Initial Information Collection** - Tailored experience based on interests
 
-#### 🏆 Gamification & Rewards
+####  Gamification & Rewards
 
 - **Coupon System** - Win rewards for organizing successful events (100+ attendees)
 - **Achievement Badges** - Recognition for active community participation
 - **Usage Benefits** - Exclusive perks for regular users and top organizers
 - **Leaderboards** - City and state-wise community rankings
 
-#### 🛡️ Advanced Safety Features
+####  Advanced Safety Features
 
 - **One-Click Reporting** - Instant report/block functionality in all chats
 - **AI Content Moderation** - Smart keyword filtering and behavior analysis
@@ -91,9 +91,9 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 
 ---
 
-## 🎨 User Journey & Interface
+##  User Journey & Interface
 
-### 🏠 Homepage Experience
+###  Homepage Experience
 
 1. **Interactive Map View** - Users land on a dynamic map showing nearby events
 2. **Event Pin Exploration** - Click any pin to view event preview
@@ -101,7 +101,7 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 4. **Instant Ticket Purchase** - UPI integration for seamless transactions
 5. **Chat Access** - Join event-specific discussions with one tap
 
-### 📱 Event Interaction Flow
+###  Event Interaction Flow
 
 - **Event Discovery** → **Detail View** → **Ticket Purchase** → **Chat Join** → **Event Attendance** → **After-Event Hub**
 - **Organizer Tools** - Dedicated dashboard for event management and participant engagement
@@ -109,14 +109,14 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 
 ---
 
-## 🎨 Product Screenshots
+##  Product Screenshots
 
 ![Alt text](artifacts/1_landig_page_initial.png)
 ![Alt text](artifacts/10_location_based_popup.png)
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 
@@ -151,16 +151,16 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 
 ---
 
-## 🚦 Development Roadmap
+##  Development Roadmap
 
-### 🎯 Phase 1: MVP (Q1-Q2)
+###  Phase 1: MVP (Q1-Q2)
 
 - [x] Interactive map with event plotting
 - [x] City-level chat rooms
 - [x] Basic event publishing system
 - [x] User authentication & profiles
 
-### 🎯 Phase 2: Community Expansion (Q2-Q3)
+###  Phase 2: Community Expansion (Q2-Q3)
 
 - [ ] Global Indian chat rooms
 - [x] Anonymous user options
@@ -168,7 +168,7 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 - [x] Advanced event filtering
 - [x] Push notifications
 
-### 🎯 Phase 3: Advanced Features (Q3-Q4)
+###  Phase 3: Advanced Features (Q3-Q4)
 
 - [ ] AI-driven event recommendations
 - [ ] Gamification system (badges, streaks)
@@ -176,7 +176,7 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 
 ---
 
-## 🎯 Target Audience
+##  Target Audience
 
 | Segment                  | Description                                   | Use Cases                                   |
 | ------------------------ | --------------------------------------------- | ------------------------------------------- |
@@ -186,7 +186,7 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 
 ---
 
-## 🏆 Competitive Advantage
+##  Competitive Advantage
 
 | Feature                       | EventHive | BookMyShow | Meetup | District (Zomato) |
 | ----------------------------- | --------- | ---------- | ------ | ----------------- |
@@ -198,7 +198,7 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -230,9 +230,9 @@ cp .env.local.example .env.local
 npm run dev
 ```
 
-🎉 Visit `http://localhost:3000` - You're ready!
+ Visit `http://localhost:3000` - You're ready!
 
-### 📚 Backend Documentation
+###  Backend Documentation
 
 - **[BACKEND_QUICKSTART.md](BACKEND_QUICKSTART.md)** - 5 min quick start guide
 - **[SUPABASE_SETUP.md](SUPABASE_SETUP.md)** - Complete setup & features
@@ -245,7 +245,7 @@ npm run dev
 ./check-supabase-setup.sh
 ```
 
-### ✨ What's Included
+###  What's Included
 
 Backend (Supabase) features:
 
@@ -304,19 +304,19 @@ SENTRY_DSN=your-sentry-dsn
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions from developers, designers, and community enthusiasts! Here's how you can help:
 
-### 🚀 How to Contribute
+###  How to Contribute
 
-1. **🍴 Fork the Project**
-2. **🔧 Create your Feature Branch** (`git checkout -b feature/AmazingFeature`)
-3. **📝 Commit your Changes** (`git commit -m 'Add some AmazingFeature'`)
-4. **📤 Push to the Branch** (`git push origin feature/AmazingFeature`)
-5. **🔀 Open a Pull Request**
+1. **�Fork the Project**
+2. ** Create your Feature Branch** (`git checkout -b feature/AmazingFeature`)
+3. ** Commit your Changes** (`git commit -m 'Add some AmazingFeature'`)
+4. ** Push to the Branch** (`git push origin feature/AmazingFeature`)
+5. ** Open a Pull Request**
 
-### 📋 Development Guidelines
+###  Development Guidelines
 
 - Follow ESLint and Prettier configurations
 - Write unit and integration tests for new features
@@ -325,7 +325,7 @@ We welcome contributions from developers, designers, and community enthusiasts! 
 - Test chat functionality thoroughly
 - Validate payment integration in sandbox
 
-### 🎨 Design Contributions
+###  Design Contributions
 
 - UI/UX improvements for map interface
 - Chat system design enhancements
@@ -334,7 +334,7 @@ We welcome contributions from developers, designers, and community enthusiasts! 
 
 ---
 
-## 📊 Project Stats
+##  Project Stats
 
 - **Lines of Code**: 25824
 - **Contributors**: 4 (You could be next! 🚀)
@@ -357,7 +357,7 @@ We welcome contributions from developers, designers, and community enthusiasts! 
 
 ---
 
-## 🌟 Inspiration & References
+##  Inspiration & References
 
 - **Event Discovery**: Meetup, BookMyShow, Facebook Events
 - **Chat Systems**: WhatsApp, Discord, Telegram
@@ -367,7 +367,7 @@ We welcome contributions from developers, designers, and community enthusiasts! 
 
 ---
 
-## 🔒 Privacy & Security
+##  Privacy & Security
 
 ### Data Protection
 
@@ -386,7 +386,7 @@ Distributed under the MIT License. See [LICENSE](/LICENSE) for more information.
 
 ---
 
-## 👥 Team
+##  Team
 
 - Aditya Bhardwaj
 - Yogesh Rana
@@ -405,18 +405,9 @@ Distributed under the MIT License. See [LICENSE](/LICENSE) for more information.
 
 ---
 -->
-
-## 🙏 Acknowledgments
-
-- Thanks to the open-source community
-- Inspired by India's diverse cultural landscape
-- Built with ❤️ for connecting communities
-
----
-
 <div align="center">
 
-### 🌟 Star this repo if you like the project!
+###  Star this repo if you like the project!
 
 **Made with ❤️ in India for India🇮🇳**
 
