@@ -111,7 +111,8 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 
 ## 🎨 Product Screenshots
 
-_Coming Soon - UI/UX designs and app screenshots showcasing the enhanced features_
+![Alt text](artifacts/1_landig_page_initial.png)
+![Alt text](artifacts/10_location_based_popup.png)
 
 ---
 
