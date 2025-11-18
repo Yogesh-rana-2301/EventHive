@@ -38,6 +38,8 @@
     "Testing/**/*",
     "**/*.test.ts",
     "**/*.test.tsx",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "src/lib/test-utils.tsx",
+    "__mocks__/**/*"
   ]
 }
