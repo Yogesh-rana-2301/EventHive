@@ -9,10 +9,11 @@
 DO $$
 DECLARE
   first_user_id uuid;
+  first_user_email text;
   event_count integer := 0;
 BEGIN
-  -- Get the first user ID from auth.users
-  SELECT id INTO first_user_id FROM auth.users ORDER BY created_at LIMIT 1;
+  -- Get the first user ID and email from auth.users
+  SELECT id, email INTO first_user_id, first_user_email FROM auth.users ORDER BY created_at LIMIT 1;
   
   -- If no user exists, raise an error
   IF first_user_id IS NULL THEN
@@ -20,6 +21,16 @@ BEGIN
   END IF;
   
   RAISE NOTICE 'Using user ID as organizer: %', first_user_id;
+  
+  -- Ensure the profile exists (in case the trigger didn't fire)
+  INSERT INTO profiles (id, email, name, username)
+  VALUES (
+    first_user_id,
+    first_user_email,
+    split_part(first_user_email, '@', 1),
+    split_part(first_user_email, '@', 1) || '_' || substr(first_user_id::text, 1, 8)
+  )
+  ON CONFLICT (id) DO NOTHING;
   
   -- Update the user's profile to be verified
   UPDATE profiles 
