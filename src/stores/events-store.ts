@@ -309,7 +309,9 @@ export const useEventsStore = create<EventsState>((set, get) => ({
       const insertedEvent = data as any;
 
       // Create a chat room for this event
-      const { data: chatRoomData, error: chatRoomError } = await supabase
+      const { data: chatRoomData, error: chatRoomError } = await (
+        supabase as any
+      )
         .from("chat_rooms")
         .insert([
           {
@@ -326,7 +328,7 @@ export const useEventsStore = create<EventsState>((set, get) => ({
         console.error("Error creating chat room:", chatRoomError);
       } else if (chatRoomData) {
         // Update the event with the chat room ID
-        await supabase
+        await (supabase as any)
           .from("events")
           .update({ chat_room_id: chatRoomData.id })
           .eq("id", insertedEvent.id);
