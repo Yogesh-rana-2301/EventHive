@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useEventsStore } from "@/stores/events-store";
 import { useGamificationStore } from "@/stores/gamification-store";
 import { useNotifications } from "@/components/notifications/notification-system";
+import { supabase } from "@/lib/supabase";
 import { Button } from "@/components/ui/button";
 import { formatDate, formatPrice } from "@/lib/utils";
 import {
@@ -45,6 +46,50 @@ export function EventDetailModal() {
   const [sharedPhotos, setSharedPhotos] = useState<
     Array<{ id: string; url: string; caption: string; author: string }>
   >([]);
+  const [isCheckingAttendance, setIsCheckingAttendance] = useState(false);
+
+  // Check if user has already joined this event whenever selectedEvent changes
+  useEffect(() => {
+    const checkAttendanceStatus = async () => {
+      if (!selectedEvent) {
+        setHasJoined(false);
+        return;
+      }
+
+      setIsCheckingAttendance(true);
+      try {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+        if (!user) {
+          setHasJoined(false);
+          setIsCheckingAttendance(false);
+          return;
+        }
+
+        const { data, error } = await supabase
+          .from("event_attendees")
+          .select("id")
+          .eq("event_id", selectedEvent.id)
+          .eq("user_id", user.id)
+          .maybeSingle();
+
+        if (error) {
+          console.error("Error checking attendance:", error);
+          setHasJoined(false);
+        } else {
+          setHasJoined(!!data);
+        }
+      } catch (error) {
+        console.error("Error checking attendance:", error);
+        setHasJoined(false);
+      } finally {
+        setIsCheckingAttendance(false);
+      }
+    };
+
+    checkAttendanceStatus();
+  }, [selectedEvent?.id]);
 
   if (!selectedEvent) return null;
 
@@ -503,11 +548,13 @@ export function EventDetailModal() {
           <div className="flex flex-col sm:flex-row gap-3">
             <Button
               onClick={handleJoinEventClick}
-              disabled={isJoining || hasJoined}
+              disabled={isJoining || hasJoined || isCheckingAttendance}
               className="flex-1"
               size="lg"
             >
-              {isJoining ? (
+              {isCheckingAttendance ? (
+                "Checking..."
+              ) : isJoining ? (
                 "Joining..."
               ) : hasJoined ? (
                 "✓ Joined"
