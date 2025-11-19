@@ -123,7 +123,7 @@ EventHive is the first-of-its-kind platform that combines **interactive map-base
 - **Web**: Next.js 14 with App Router
 - **UI Framework**: Tailwind CSS + shadcn/ui
 - **State Management**: Zustand / Redux Toolkit
-- **Maps Integration**: Google Maps API with custom markers
+- **Maps Integration**: OpenStreetMap API with custom markers
 
 ### Backend
 
