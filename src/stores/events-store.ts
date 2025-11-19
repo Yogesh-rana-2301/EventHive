@@ -265,6 +265,7 @@ export const useEventsStore = create<EventsState>((set, get) => ({
       } = await supabase.auth.getUser();
       if (!user) throw new Error("Not authenticated");
 
+      // First, create the event
       const { data, error } = await supabase
         .from("events")
         .insert([
@@ -306,6 +307,32 @@ export const useEventsStore = create<EventsState>((set, get) => ({
       if (!data) throw new Error("Failed to create event");
 
       const insertedEvent = data as any;
+
+      // Create a chat room for this event
+      const { data: chatRoomData, error: chatRoomError } = await supabase
+        .from("chat_rooms")
+        .insert([
+          {
+            name: `${insertedEvent.title} - Chat`,
+            type: "event",
+            event_id: insertedEvent.id,
+            created_by: user.id,
+          },
+        ])
+        .select()
+        .single();
+
+      if (chatRoomError) {
+        console.error("Error creating chat room:", chatRoomError);
+      } else if (chatRoomData) {
+        // Update the event with the chat room ID
+        await supabase
+          .from("events")
+          .update({ chat_room_id: chatRoomData.id })
+          .eq("id", insertedEvent.id);
+
+        insertedEvent.chat_room_id = chatRoomData.id;
+      }
 
       const newEvent: Event = {
         id: insertedEvent.id,

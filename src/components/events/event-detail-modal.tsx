@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useEventsStore } from "@/stores/events-store";
 import { useGamificationStore } from "@/stores/gamification-store";
 import { useNotifications } from "@/components/notifications/notification-system";
+import { useChatStore } from "@/stores/chat-store";
 import { supabase } from "@/lib/supabase";
 import { Button } from "@/components/ui/button";
 import { formatDate, formatPrice } from "@/lib/utils";
@@ -32,6 +33,7 @@ export function EventDetailModal() {
   const { selectedEvent, selectEvent, joinEvent } = useEventsStore();
   const { incrementEventAttended } = useGamificationStore();
   const { showPointsNotification } = useNotifications();
+  const { joinRoom } = useChatStore();
   const [isJoining, setIsJoining] = useState(false);
   const [hasJoined, setHasJoined] = useState(false);
   const [showJoinConfirmation, setShowJoinConfirmation] = useState(false);
@@ -191,11 +193,20 @@ export function EventDetailModal() {
 
       // Navigate to chat
       if (selectedEvent.chatRoomId) {
-        // TODO: Implement chat navigation
-        console.log("Navigating to chat for event:", selectedEvent.id);
-        alert("Chat feature coming soon!");
+        try {
+          await joinRoom(selectedEvent.chatRoomId);
+          console.log("Joined chat for event:", selectedEvent.id);
+          // The chat system component will automatically show the chat
+        } catch (chatError) {
+          console.error("Failed to join chat:", chatError);
+          alert(
+            "Joined event, but couldn't open chat. Please try accessing it from the chat menu."
+          );
+        }
       } else {
-        alert("No chat room available for this event.");
+        alert(
+          "No chat room available for this event. The organizer hasn't set it up yet."
+        );
       }
     } catch (error) {
       console.error("Failed to join event:", error);
@@ -217,11 +228,17 @@ export function EventDetailModal() {
     }
   };
 
-  const handleJoinChat = () => {
+  const handleJoinChat = async () => {
     // Direct chat access (without joining)
     if (selectedEvent.chatRoomId) {
-      console.log("Join chat for event:", selectedEvent.id);
-      alert("Chat feature coming soon!");
+      try {
+        await joinRoom(selectedEvent.chatRoomId);
+        console.log("Joined chat for event:", selectedEvent.id);
+        // The chat system component will automatically show the chat
+      } catch (error) {
+        console.error("Failed to join chat:", error);
+        alert("Failed to open chat. Please try again.");
+      }
     } else {
       alert("No chat room available for this event.");
     }

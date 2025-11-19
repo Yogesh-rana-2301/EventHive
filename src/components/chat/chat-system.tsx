@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useChatStore } from "@/stores/chat-store";
-import { MessageCircle, X, Users } from "lucide-react";
+import { MessageCircle, X, Users, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Dynamic imports to avoid TypeScript module resolution issues
@@ -12,8 +12,13 @@ import { ChatInput } from "@/components/chat/chat-input";
 
 export function ChatSystem() {
   const [isOpen, setIsOpen] = useState(false);
-  const { activeRoom, connectToSocket, disconnectFromSocket, isConnected } =
-    useChatStore();
+  const {
+    activeRoom,
+    connectToSocket,
+    disconnectFromSocket,
+    isConnected,
+    leaveRoom,
+  } = useChatStore();
 
   useEffect(() => {
     if (isOpen && !isConnected) {
@@ -29,6 +34,12 @@ export function ChatSystem() {
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleBackToRooms = () => {
+    if (activeRoom) {
+      leaveRoom(activeRoom.id);
+    }
   };
 
   return (
@@ -53,7 +64,16 @@ export function ChatSystem() {
         <div className="fixed bottom-24 right-6 w-96 h-[600px] bg-white rounded-lg shadow-2xl border border-gray-200 z-30 flex flex-col overflow-hidden">
           {/* Chat Header */}
           <div className="bg-primary-500 text-white p-4 flex items-center justify-between">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 flex-1">
+              {activeRoom && (
+                <button
+                  onClick={handleBackToRooms}
+                  className="hover:bg-primary-600 p-1 rounded transition-colors mr-1"
+                  title="Back to all chats"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                </button>
+              )}
               <MessageCircle className="h-5 w-5" />
               <div>
                 <h3 className="font-medium">
