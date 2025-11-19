@@ -166,15 +166,19 @@ export const useChatStore = create<ChatState>((set, get) => ({
         throw roomError;
       }
 
+      if (!roomData) {
+        throw new Error("Room not found");
+      }
+
       const room: ChatRoom = {
-        id: roomData.id,
-        name: roomData.name,
-        type: roomData.type,
-        eventId: roomData.event_id,
-        location: roomData.event
+        id: (roomData as any).id,
+        name: (roomData as any).name,
+        type: (roomData as any).type,
+        eventId: (roomData as any).event_id,
+        location: (roomData as any).event
           ? {
-              city: roomData.event.city,
-              state: roomData.event.state,
+              city: (roomData as any).event.city,
+              state: (roomData as any).event.state,
             }
           : undefined,
         participants: 0,
@@ -212,8 +216,8 @@ export const useChatStore = create<ChatState>((set, get) => ({
               id: payload.new.id,
               content: payload.new.content,
               userId: payload.new.user_id,
-              username: userData?.name || "Unknown User",
-              avatar: userData?.avatar_url,
+              username: (userData as any)?.name || "Unknown User",
+              avatar: (userData as any)?.avatar_url,
               timestamp: payload.new.created_at,
               isAnonymous: false,
               reactions: [],
@@ -263,7 +267,7 @@ export const useChatStore = create<ChatState>((set, get) => ({
       }
 
       // Insert message into database
-      const { data, error } = await supabase
+      const { data, error } = await (supabase as any)
         .from("messages")
         .insert([
           {
